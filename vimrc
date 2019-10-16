@@ -86,3 +86,14 @@ nnoremap <C-H> <C-W><C-H>
 
 " Rust
 let g:rustfmt_autosave = 1
+
+" Map alt to be escape for vim + tmux
+
+" Plugins to investigate
+" tpope surround and commentary
+" christomney system-copy
+" christomney vim tmux navigator
+
+" Custom text objects to investigate
+"  kana/vim-textobj-line
+"  michaeljsmith/vim-indent-object
