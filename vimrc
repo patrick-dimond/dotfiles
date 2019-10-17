@@ -1,39 +1,43 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug '~/.fzf'
-Plug 'junegunn/fzf.vim'
-
-Plug 'scrooloose/nerdtree'
-
-Plug 'rust-lang/rust.vim'
-
-Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
-
 Plug 'airblade/vim-gitgutter'
-
-Plug 'sheerun/vim-polyglot'
+Plug 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-system-copy'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'edkolev/tmuxline.vim'
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug '~/.fzf'
 
 call plug#end()
 
 " Normal stuff
-syntax on
+set autoindent
+set expandtab
 set number relativenumber
 set ruler
-set wrap
-set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
-set autoindent
-
+set tabstop=2
+set wrap
 syntax on
+
+" Colours!
 colorscheme onedark
-let g:airline_theme='onedark'
 let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_theme='onedark'
 
 " FZF and rg
 " ctrl f to ripgrep find
@@ -75,25 +79,5 @@ set updatetime=100
 " no keymappings
 let g:gitgutter_map_keys = 0
 
-
-
-" Splits
-" Use ctrl- <> instead of ctrl - w and ctrl - <>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Rust
 let g:rustfmt_autosave = 1
-
-" Map alt to be escape for vim + tmux
-
-" Plugins to investigate
-" tpope surround and commentary
-" christomney system-copy
-" christomney vim tmux navigator
-
-" Custom text objects to investigate
-"  kana/vim-textobj-line
-"  michaeljsmith/vim-indent-object
