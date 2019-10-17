@@ -26,6 +26,7 @@ call plug#end()
 " Normal stuff
 set autoindent
 set expandtab
+set incsearch
 set number relativenumber
 set ruler
 set shiftwidth=2
@@ -33,6 +34,9 @@ set softtabstop=2
 set tabstop=2
 set wrap
 syntax on
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
 
 " Colours!
 colorscheme onedark
